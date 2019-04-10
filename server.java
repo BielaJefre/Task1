@@ -5,11 +5,11 @@ public class server
 {
 	public static void main(String[] args)throws IOException
 	{
-		ServerSocket serverSocket = new ServerSocket(2530);
+		ServerSocket serverSocket = new ServerSocket(10000);
 
 		Socket clientSocket = serverSocket.accept();
 
-		System.out.println("Ni hao");
+		System.out.println("Client connected");
 
 		InputStreamReader gt = new 
 InputStreamReader(clientSocket.getInputStream());
@@ -19,7 +19,7 @@ InputStreamReader(clientSocket.getInputStream());
 		PrintWriter rp = new 
 PrintWriter(clientSocket.getOutputStream());
 
-		rp.println("Wo hen hao");
+		rp.println("Ni hao ma");
 		rp.flush();
 
 		String recvr = ot.readLine();
